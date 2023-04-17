@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<input/>
+<button> Compare com o meu segredo </button>
+
+<script>
+  var segredo = Math.round(Math.random() *10);
+
+  var input = document.querySelector("input"); // querySelector busca no html o button no qual iremos interagir com o javaScript
+  input.focus(); // comando aqui é usado para que ao entrar ou recarregar a pagina, o foco vá para o botão
+
+  function verifica(){
+      
+    if (input.value == segredo){
+        alert("VOCÊ ACERTOU!")
+      } else {
+        alert ("VOCÊ ERROU!");
+    }
+
+    
+  input.value = ""; // comando usado para limpar automaticamente o campo do input caso a resposta seja correta/errada. 
+  input.focus(); // comando usado para focar no input, para que o cursor não saia após clicado no mesmo ao realizar a ação.
+  }
+
+
+  var button = document.querySelector("button");
+
+  button.onclick = verifica;
+
+</script>

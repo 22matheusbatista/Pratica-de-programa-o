@@ -1,0 +1,20 @@
+- For ()
+- while ()
+
+Exemplos "Tabuada do 7" (os dois trazem o mesmo resultado):
+
+//for:
+for(var multiplicador = 1; multiplicador <= 10; multiplicador = multiplicador + 1){
+mostra(7 \* multiplicador);
+}
+
+---
+
+// while:
+var multiplicador = 1; "_Variavel precisa ser informada no while para a condição ser "false" e acabar com o loop_"
+while(multiplicador <=10 "condição que vai ser comparada com a variavel"){
+
+mostra(7 * multiplicador);
+multiplicador = multiplicador + 1; "critério de incremento"
+
+}

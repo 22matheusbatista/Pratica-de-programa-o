@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css">
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <h1> Lista de Tarefas | Matheus</h1>
+
+    <!--digitar tarefa-->
+    <div class="content--add-item">
+      <input type="text" id="input--new-task" placeholder="Digite aqui sua tarefa!">
+      <button id="btn-new-task">
+        +
+      </button>
+    </div>
+
+    <!--lista-->
+    <div class="content"> 
+      <ol id="to--do-list"> 
+      </ol>
+    </div>
+
+</body>
+<script>
+  
+  function newTask(){
+  
+  var input = document.getElementById('input--new-task')
+  
+  if(!input.value){
+    alert('Digite algo para inserir em sua lista!')
+  }
+  }
+  
+  document.getElementById("btn-new-task").addEventListener("click", newTask);
+  
+  </script>
+</html>

@@ -1,0 +1,61 @@
+:root{
+  #fff
+
+}
+
+body{
+  background-color: rgb(20, 20, 20);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(204, 102, 89);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.content{
+  color: aliceblue;
+  font-family: 'trebuchet MS';
+  align-items: center;
+  flex-direction: column;
+  display: center;
+
+}
+
+.content--add-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#input--new-task,
+#btn-new-task{
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  padding: 1rem;
+}
+#input--new-task{
+  width: 20rem;
+  border-radius: 1rem;
+}
+#btn-new-task{
+  border-radius: 1rem;
+  background-color: rgb(71, 71, 71);
+  color: #fff;
+
+}
+
+#to--do-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+
+}
+#to--do-list li{
+  font-size: 1.4rem;
+  
+}
+

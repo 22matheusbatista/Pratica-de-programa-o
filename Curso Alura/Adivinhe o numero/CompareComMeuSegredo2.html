@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="compareComMeuSegredo.css">
+  <title>Adivinhe o numero</title>
+</head>
+<body>
+  <h1>Adivinhe o Numero!</h1>
+  <div class="input" placeholder="Coloque aqui o seu chute">
+    <input/>
+    <button class="botao"> COMPARE COM O MEU SEGREDO </button>
+  </div>
+  
+</body>
+
+    <script>
+      var segredo = [3,7,15,20]; //Array
+      var input = document.querySelector("input"); // querySelector busca no html o button no qual iremos interagir com o javaScript
+      input.focus(); // comando aqui é usado para que ao entrar ou recarregar a pagina, o foco vá para o botão
+
+      function verifica(){
+        var achou = false;
+
+        // for(var posicao = 0; posicao < segredo < 4; posicao++)
+        for(var posicao = 0; posicao < segredo.length; posicao++){ // segredo.length o comando se refere a adição de novos indices na variavel, aqui ele vai identificar auto caso algum indice seja add ou removido
+            if (input.value == segredo[posicao]){
+              alert("VOCÊ ACERTOU!");
+              achou = true;
+              break;// em caso de acerto, os demais comandos deixam de ser executados
+            }
+        }
+          if (achou == false){
+            alert ("VOCÊ ERROU!");
+          }
+        
+        
+        input.value = ""; // comando usado para limpar automaticamente o campo do input caso a resposta seja correta/errada. 
+        input.focus(); // comando usado para focar no input, para que o cursor não saia após clicado no mesmo ao realizar a ação.
+      }
+
+
+      var button = document.querySelector("button");
+
+      button.onclick = verifica;
+
+    </script>
+</html>
+
+
